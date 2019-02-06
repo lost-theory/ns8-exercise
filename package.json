@@ -1,0 +1,15 @@
+{
+  "name": "ns8-exercise",
+  "version": "0.0.1",
+  "description": "My solution for https://github.com/ns8inc/ns8-tech-assessment",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "author": "Steven Kryskalla",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "^5.2.0",
+    "typescript": "^3.3.1"
+  }
+}
