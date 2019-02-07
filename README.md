@@ -12,7 +12,7 @@ $ npm run start
 
 # Notes, assumptions, etc.
 
-* I used UUIDs for user & event IDs instead of numeric auto-increment IDs. UUIDs are easier to shard than numeric auto-increment IDs and immune to [enumeration attacks](https://www.owasp.org/index.php/Testing_for_User_Enumeration_and_Guessable_User_Account_%28OWASP-AT-002%29) (if using proper random number generation). Before moving to production I would use an integer column type (or UUID column type if available) instead of a string column type to store the UUIDs more efficiently.
+* I used UUIDs for user & event IDs instead of numeric auto-increment IDs. UUIDs are easier to shard than numeric auto-increment IDs and immune to [enumeration attacks](https://www.owasp.org/index.php/Testing_for_User_Enumeration_and_Guessable_User_Account_%28OWASP-AT-002%29) (if using UUIDv4 with good RNG). Before moving to production I would use an integer column type (or UUID column type if available) instead of a string column type to store the UUIDs more efficiently.
 * For input validation I used regexes in the model layer. To improve the current validation code I would:
   * 1. Use a validation library (e.g. replace the email regex with an NPM module that does more robust email validation).
   * 2. Move the validation code into a separate validation layer, outside of the model code.
