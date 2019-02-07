@@ -19,7 +19,7 @@ export module User {
             throw {validationError: "The email field is required."};
         } else if(password === undefined) {
             throw {validationError: "The password field is required."};
-        } if(!email.match(/^[a-z0-9._+-]+@[a-z0-9-.]+\.[a-z]{2,}$/i)) {
+        } else if(!email.match(/^[a-z0-9._+-]+@[a-z0-9-.]+\.[a-z]{2,}$/i)) {
             throw {validationError: "Invalid email address."};
         } else if(!(password.match(/[a-z]/i) && password.match(/\d/))) {
             throw {validationError: "Invalid password. Password must contain at least one letter and one number."};
