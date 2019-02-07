@@ -29,11 +29,6 @@ db.serialize(function () {
     db.run(`CREATE INDEX IF NOT EXISTS eventCreatedIdx ON events(created);`);
     db.run(`CREATE INDEX IF NOT EXISTS eventUserIdx ON events(userId);`);
     console.log("Schema created.");
-    User.create(db, "test@testing.test", "thisismyp4ss", "248-555-1234").then((value) => {
-        console.log(`Test user created.`);
-    }, (reason) => {
-        console.log(`Creating test user failed because ${reason} or ${reason.validationError}.`);
-    });
 });
 
 db.close();
