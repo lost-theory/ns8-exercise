@@ -4,7 +4,10 @@
     npm install
 
     # initialize sqlite database on disk
-    ./node_modules/.bin/tsc && node dist/schema.js
+    npm run schema
+
+    # run express server
+    npm run server
 ```
 
 # Notes, assumptions, etc.

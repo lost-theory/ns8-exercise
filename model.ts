@@ -40,4 +40,12 @@ export module User {
             );
         });
     };
+
+    export function all(db:any) {
+        return new Promise(function(resolve, reject) {
+            db.all("SELECT id, email, phoneNumber, created FROM users", [], function(err, rows) {
+                return resolve({err: err, rows: rows});
+            });
+        });
+    };
 };
